@@ -318,4 +318,12 @@ footer {
 		width: 90vw;
 	}
 }
+::selection {
+	background: hsl(136, 65%, 51%); /* WebKit/Blink Browsers */
+	color: hsl(233, 26%, 24%);
+}
+::-moz-selection {
+	background: hsl(136, 65%, 51%); /* Gecko Browsers */
+	color: hsl(233, 26%, 24%);
+}
 @import "media";
