@@ -9,6 +9,15 @@
 </head>
 
 <body>
+  <div class="nav-mobile">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Blog</li>
+      <li>Careers</li>
+    </ul>
+  </div>
   <nav>
     <div class="container">
       <div class="nav-list">
@@ -21,6 +30,9 @@
           <li><a href="#">Careers</a></li>
         </ul>
         <button class="btn">Request Invite</button>
+        <button class="ham">
+          <img src="./images/icon-hamburger.svg" alt="">
+        </button>
       </div>
     </div>
   </nav>
@@ -180,6 +192,21 @@
       </div>
     </div>
   </footer>
+  <script>
+    let navOpened = false
+
+    document.querySelector(".ham").addEventListener("click", function () {
+      document.querySelector(".nav-mobile").classList.toggle("opened")
+
+      if (!navOpened) {
+        this.querySelector("img").src = `./images/icon-close.svg`
+        navOpened = true
+      } else {
+        this.querySelector("img").src = `./images/icon-hamburger.svg`
+        navOpened = false
+      }
+    })
+  </script>
 </body>
 
 </html>

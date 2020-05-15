@@ -280,3 +280,42 @@ footer {
 		font-size: 1.3rem;
 	}
 }
+.ham {
+	display: none;
+}
+.nav-mobile {
+	box-shadow: 0px 0px 44px -8px rgba(0, 0, 0, 0.75);
+	position: fixed;
+	margin: 8rem auto;
+	background-color: #fff;
+	font-size: 3rem;
+	text-align: center;
+	left: 50%;
+	height: 0vh;
+	overflow: hidden;
+	transform: translateX(-50%);
+	z-index: 10;
+	width: 0vw;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4rem;
+	opacity: 0;
+	transition: opacity 0.1s, width 0.4s, height 0.4s;
+	li {
+		transition: all 0.3s;
+	}
+	li:hover {
+		color: hsl(136, 65%, 51%);
+	}
+	li:not(:last-of-type) {
+		margin-bottom: 2rem;
+	}
+	&.opened {
+		height: 45rem;
+		opacity: 1;
+		width: 90vw;
+	}
+}
+@import "media";
